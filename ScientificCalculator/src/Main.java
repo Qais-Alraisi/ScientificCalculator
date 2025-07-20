@@ -28,4 +28,24 @@ public class Main {
         double result = a - b;
         System.out.print("The subtraction of " + a + " and " + b + " is " + result);
     }
+
+    public static void Multiplication() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        double a = scanner.nextDouble();
+        System.out.print("Enter second number: ");
+        double b = scanner.nextDouble();
+        double result = a * b;
+        System.out.print("The product of " + a + " and " + b + " is " + result);
+    }
+
+    public static void division() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        double a = scanner.nextDouble();
+        System.out.print("Enter second number: ");
+        double b = scanner.nextDouble();
+        double result = a / b;
+        System.out.print("The Quotient of " + a + " and " + b + " is " + result);
+    }
 }
