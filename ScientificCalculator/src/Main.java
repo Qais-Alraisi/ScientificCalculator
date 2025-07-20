@@ -14,15 +14,71 @@ public class Main {
                 case "1a":
                     System.out.println("you chose addition");
                     addition();
+                    break;
                 case "2a":
                     System.out.println("you chose subtraction");
                     subtraction();
+                    break;
                 case "3a":
                     System.out.println("you chose multiplication");
                     multiplication();
+                    break;
                 case "4a":
                     System.out.println("you chose division");
-                    division();cm
+                    division();
+                    break;
+                case "1b":
+                    System.out.println("you chose power");
+                    power();
+                    break;
+                case "2b":
+                    System.out.println("you chose square root");
+                    squareRoot();
+                    break;
+                case "3b":
+                    System.out.println("you chose sine");
+                    sine();
+                    break;
+                case "4b":
+                    System.out.println("you chose cosine");
+                    cosine();
+                    break;
+                case "5b":
+                    System.out.println("you chose tangent");
+                    tangent();
+                    break;
+                case "6b":
+                    System.out.println("you chose Natural Logarithm");
+                    naturalLogarithm();
+                    break;
+                case "7b":
+                    System.out.println("you chose Logarithm");
+                    logarithm();
+                    break;
+                case "8b":
+                    System.out.println("you chose Absolute Value");
+                    absoluteValue();
+                    break;
+                case "9b":
+                    System.out.println("you chose Rounding to nearest long");
+                    round();
+                    break;
+                case "10b":
+                    System.out.println("you chose ceiling");
+                    ceiling();
+                    break;
+                case "11b":
+                    System.out.println("you chose floor");
+                    floor();
+                    break;
+                case "12b":
+                    System.out.println("you chose minimum");
+                    minimum();
+                    break;
+                case "13b":
+                    System.out.println("you chose maximum");
+                    maximum();
+                    break;
             }
         }
 
@@ -75,7 +131,7 @@ public class Main {
         System.out.print("Enter exponent: ");
         double b = scanner.nextDouble();
         double result = Math.pow(a, b);
-        System.out.print("The Power of " + a + " and " + b + " is " + result);
+        System.out.print(a + " to the power of "+b+ " is " + result);
     }
 
     public static void squareRoot() {
@@ -96,14 +152,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your number: ");
         double a = scanner.nextDouble();
-        System.out.print("The Sine of " + a + " is " + Math.cos(a));
+        System.out.print("The Cosine of " + a + " is " + Math.cos(a));
     }
 
     public static void tangent() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your number: ");
         double a = scanner.nextDouble();
-        System.out.print("The Sine of " + a + " is " + Math.tan(a));
+        System.out.print("The Tangent of " + a + " is " + Math.tan(a));
     }
 
     public static void naturalLogarithm() {
@@ -153,7 +209,7 @@ public class Main {
         ArrayList<Float> numList = new ArrayList<>();
         while (true) {
 
-            System.out.print("Enter your number: (input exit to stop)");
+            System.out.print("Enter your number: (input exit to stop): ");
             String input = scanner.nextLine();
 
             if (input.equalsIgnoreCase("exit")) {
@@ -176,7 +232,7 @@ public class Main {
         ArrayList<Float> numList = new ArrayList<>();
         while (true) {
 
-            System.out.print("Enter your number: (input exit to stop)");
+            System.out.print("Enter your number: (input exit to stop): ");
             String input = scanner.nextLine();
 
             if (input.equalsIgnoreCase("exit")) {
