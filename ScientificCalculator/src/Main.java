@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         new Scanner(System.in);
         while (true) {
-            System.out.print("Select an Arithmetic operation:\n__________________________________________________________\n| 1a = add | 2a = subtract | 3a = multiply | 4a = divide |\n\nSelect a  Scientific operation:\n________________________________________________________________________________________________________________________________________________________________________________________________________________\n| 1b = Power | 2b = Sine | 3b = Cosine | 4b = Tangent | 5b = Natural Logarithm | 6b = Logarithm | 7b = Absolute Value | 8b = Round (nearest long) | 9b = Ceiling | 10b = Floor | 11b = Minimum | 12b = Maximum | \nControl & Utilities:\n________________________________________________________\n| 1c  = Display Menu | 2c = Helper Methods | 3c = Exit |\n\n");
+            System.out.print("Select an Arithmetic operation:\n__________________________________________________________\n| 1a = add | 2a = subtract | 3a = multiply | 4a = divide |\n\nSelect a  Scientific operation:\n___________________________________________________________________________________________________________________________________________________________________________________________________________________________________\n| 1b = Power | 2b = Square Root | 3b = Sine | 4b = Cosine | 5b = Tangent | 6b = Natural Logarithm | 7b = Logarithm | 8b = Absolute Value  | 9b = Round (nearest long) | 10b = Ceiling | 11b = Floor | 12b = Minimum | 13b = Maximum |\nControl & Utilities:\n________________________________________________________\n| 1c  = Display Menu | 2c = Helper Methods | 3c = Exit |\n\n");
         }
     }
 
@@ -47,5 +47,21 @@ public class Main {
         double b = scanner.nextDouble();
         double result = a / b;
         System.out.print("The Quotient of " + a + " and " + b + " is " + result);
+    }
+
+    public static void power(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter base number: ");
+        double a = scanner.nextDouble();
+        System.out.print("Enter exponent: ");
+        double b = scanner.nextDouble();
+        double result = Math.pow(a,b);
+        System.out.print("The Power of " + a + " and " + b + " is " + result);
+    }
+    public static void squareRoot(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your number: ");
+        double a = scanner.nextDouble();
+        System.out.print("The Square Root of " + a + " is " + Math.sqrt(a));
     }
 }
