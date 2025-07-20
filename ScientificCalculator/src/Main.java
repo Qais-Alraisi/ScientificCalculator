@@ -58,10 +58,46 @@ public class Main {
         double result = Math.pow(a,b);
         System.out.print("The Power of " + a + " and " + b + " is " + result);
     }
+
     public static void squareRoot(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your number: ");
         double a = scanner.nextDouble();
         System.out.print("The Square Root of " + a + " is " + Math.sqrt(a));
+    }
+
+    public static void sine(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your number: ");
+        double a = scanner.nextDouble();
+        System.out.print("The Sine of " + a + " is " + Math.sin(a));
+    }
+
+    public static void cosine(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your number: ");
+        double a = scanner.nextDouble();
+        System.out.print("The Sine of " + a + " is " + Math.cos(a));
+    }
+
+    public static void tangent(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your number: ");
+        double a = scanner.nextDouble();
+        System.out.print("The Sine of " + a + " is " + Math.tan(a));
+    }
+
+    public static void naturalLogarithm(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your number: ");
+        double a = scanner.nextDouble();
+        System.out.print("The natural logarithm of " + a + " is " + Math.log(a));
+    }
+
+    public static void logarithm(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your number: ");
+        double a = scanner.nextDouble();
+        System.out.print("The logarithm of " + a + " is " + Math.log10(a));
     }
 }
