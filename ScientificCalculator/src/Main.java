@@ -1,5 +1,5 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 public class Main {
@@ -10,75 +10,83 @@ public class Main {
             System.out.print(menu);
             System.out.print("Enter your choice: ");
             String input = scanner.nextLine();
-            switch (input.toLowerCase()) {
-                case "1a":
-                    System.out.println("you chose addition");
-                    addition();
-                    break;
-                case "2a":
-                    System.out.println("you chose subtraction");
-                    subtraction();
-                    break;
-                case "3a":
-                    System.out.println("you chose multiplication");
-                    multiplication();
-                    break;
-                case "4a":
-                    System.out.println("you chose division");
-                    division();
-                    break;
-                case "1b":
-                    System.out.println("you chose power");
-                    power();
-                    break;
-                case "2b":
-                    System.out.println("you chose square root");
-                    squareRoot();
-                    break;
-                case "3b":
-                    System.out.println("you chose sine");
-                    sine();
-                    break;
-                case "4b":
-                    System.out.println("you chose cosine");
-                    cosine();
-                    break;
-                case "5b":
-                    System.out.println("you chose tangent");
-                    tangent();
-                    break;
-                case "6b":
-                    System.out.println("you chose Natural Logarithm");
-                    naturalLogarithm();
-                    break;
-                case "7b":
-                    System.out.println("you chose Logarithm");
-                    logarithm();
-                    break;
-                case "8b":
-                    System.out.println("you chose Absolute Value");
-                    absoluteValue();
-                    break;
-                case "9b":
-                    System.out.println("you chose Rounding to nearest long");
-                    round();
-                    break;
-                case "10b":
-                    System.out.println("you chose ceiling");
-                    ceiling();
-                    break;
-                case "11b":
-                    System.out.println("you chose floor");
-                    floor();
-                    break;
-                case "12b":
-                    System.out.println("you chose minimum");
-                    minimum();
-                    break;
-                case "13b":
-                    System.out.println("you chose maximum");
-                    maximum();
-                    break;
+            if (!input.equals("3c")) {
+                switch (input.toLowerCase()) {
+                    case "1a":
+                        System.out.println("you chose addition");
+                        addition();
+                        break;
+                    case "2a":
+                        System.out.println("you chose subtraction");
+                        subtraction();
+                        break;
+                    case "3a":
+                        System.out.println("you chose multiplication");
+                        multiplication();
+                        break;
+                    case "4a":
+                        System.out.println("you chose division");
+                        division();
+                        break;
+                    case "1b":
+                        System.out.println("you chose power");
+                        power();
+                        break;
+                    case "2b":
+                        System.out.println("you chose square root");
+                        squareRoot();
+                        break;
+                    case "3b":
+                        System.out.println("you chose sine");
+                        sine();
+                        break;
+                    case "4b":
+                        System.out.println("you chose cosine");
+                        cosine();
+                        break;
+                    case "5b":
+                        System.out.println("you chose tangent");
+                        tangent();
+                        break;
+                    case "6b":
+                        System.out.println("you chose Natural Logarithm");
+                        naturalLogarithm();
+                        break;
+                    case "7b":
+                        System.out.println("you chose Logarithm");
+                        logarithm();
+                        break;
+                    case "8b":
+                        System.out.println("you chose Absolute Value");
+                        absoluteValue();
+                        break;
+                    case "9b":
+                        System.out.println("you chose Rounding to nearest long");
+                        round();
+                        break;
+                    case "10b":
+                        System.out.println("you chose ceiling");
+                        ceiling();
+                        break;
+                    case "11b":
+                        System.out.println("you chose floor");
+                        floor();
+                        break;
+                    case "12b":
+                        System.out.println("you chose minimum");
+                        minimum();
+                        break;
+                    case "13b":
+                        System.out.println("you chose maximum");
+                        maximum();
+                        break;
+                    case "1c":
+                        System.out.println(menu);
+                    default:
+                        System.out.println("Invalid input, please try again");
+                }
+            } else{
+                break;
             }
         }
 
@@ -86,42 +94,119 @@ public class Main {
 
     public static void addition() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter first number: ");
-        double a = scanner.nextDouble();
-        System.out.print("Enter second number: ");
-        double b = scanner.nextDouble();
-        double result = a + b;
+        double a = 0, b=0, result = 0;
+        while (true) {
+            try {
+                System.out.print("Enter first number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
+        while (true){
+            try {
+                System.out.print("Enter second number: ");
+                b = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
+        result = a + b;
         System.out.print("The Sum of " + a + " and " + b + " is " + result);
     }
 
     public static void subtraction() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter first number: ");
-        double a = scanner.nextDouble();
-        System.out.print("Enter second number: ");
-        double b = scanner.nextDouble();
-        double result = a - b;
+        double a = 0, b = 0, result = 0;
+        while (true) {
+            try {
+                System.out.print("Enter first number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
+        while (true) {
+            try {
+                System.out.print("Enter second number: ");
+                b = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
+        result = a - b;
         System.out.print("The subtraction of " + a + " and " + b + " is " + result);
     }
 
+
     public static void multiplication() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter first number: ");
-        double a = scanner.nextDouble();
-        System.out.print("Enter second number: ");
-        double b = scanner.nextDouble();
-        double result = a * b;
+        double a = 0, b=0, result = 0;
+        while (true) {
+            try {
+                System.out.print("Enter first number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
+        while (true){
+            try {
+                System.out.print("Enter second number: ");
+                b = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
+        result = a * b;
         System.out.print("The product of " + a + " and " + b + " is " + result);
     }
 
     public static void division() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter first number: ");
-        double a = scanner.nextDouble();
-        System.out.print("Enter second number: ");
-        double b = scanner.nextDouble();
-        double result = a / b;
-        System.out.print("The Quotient of " + a + " and " + b + " is " + result);
+        double a = 0, b=0, result = 0;
+        while (true) {
+            try {
+                System.out.print("Enter first number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
+        while (true){
+            try {
+                System.out.print("Enter second number: ");
+                b = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
+        result = a / b;
+        System.out.print("The division of " + a + " and " + b + " is " + result);
     }
 
     public static void power() {
