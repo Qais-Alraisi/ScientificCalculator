@@ -5,12 +5,12 @@ import java.util.Collections;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String menu = "\nSelect an Arithmetic operation:\n__________________________________________________________\n| 1a = add | 2a = subtract | 3a = multiply | 4a = divide |\n\nSelect a  Scientific operation:\n___________________________________________________________________________________________________________________________________________________________________________________________________________________________________\n| 1b = Power | 2b = Square Root | 3b = Sine | 4b = Cosine | 5b = Tangent | 6b = Natural Logarithm | 7b = Logarithm | 8b = Absolute Value  | 9b = Round (nearest long) | 10b = Ceiling | 11b = Floor | 12b = Minimum | 13b = Maximum |\nControl & Utilities:\n________________________________________________________\n| 1c  = Display Menu | 2c = Helper Methods | 3c = Exit |\n\n";
+        String menu = "\nSelect an Arithmetic operation:\n__________________________________________________________\n| 1a = add | 2a = subtract | 3a = multiply | 4a = divide |\n\nSelect a  Scientific operation:\n___________________________________________________________________________________________________________________________________________________________________________________________________________________________________\n| 1b = Power | 2b = Square Root | 3b = Sine | 4b = Cosine | 5b = Tangent | 6b = Natural Logarithm | 7b = Logarithm | 8b = Absolute Value  | 9b = Round (nearest long) | 10b = Ceiling | 11b = Floor | 12b = Minimum | 13b = Maximum |\nControl & Utilities:\n__________________________________\n| 1c  = Display Menu | 2c = Exit |\n\n";
         while (true) {
             System.out.print(menu);
             System.out.print("Enter your choice: ");
             String input = scanner.nextLine();
-            if (!input.equals("3c")) {
+            if (!input.equals("2c")) {
                 switch (input.toLowerCase()) {
                     case "1a":
                         System.out.println("you chose addition");
