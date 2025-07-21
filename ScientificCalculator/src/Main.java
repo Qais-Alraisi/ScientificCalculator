@@ -94,7 +94,7 @@ public class Main {
 
     public static void addition() {
         Scanner scanner = new Scanner(System.in);
-        double a = 0, b=0, result = 0;
+        double a, b, result;
         while (true) {
             try {
                 System.out.print("Enter first number: ");
@@ -123,7 +123,7 @@ public class Main {
 
     public static void subtraction() {
         Scanner scanner = new Scanner(System.in);
-        double a = 0, b = 0, result = 0;
+        double a, b, result;
         while (true) {
             try {
                 System.out.print("Enter first number: ");
@@ -153,7 +153,7 @@ public class Main {
 
     public static void multiplication() {
         Scanner scanner = new Scanner(System.in);
-        double a = 0, b=0, result = 0;
+        double a, b, result;
         while (true) {
             try {
                 System.out.print("Enter first number: ");
@@ -182,7 +182,7 @@ public class Main {
 
     public static void division() {
         Scanner scanner = new Scanner(System.in);
-        double a = 0, b=0, result = 0;
+        double a, b, result;
         while (true) {
             try {
                 System.out.print("Enter first number: ");
@@ -211,81 +211,201 @@ public class Main {
 
     public static void power() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter base number: ");
-        double a = scanner.nextDouble();
-        System.out.print("Enter exponent: ");
-        double b = scanner.nextDouble();
-        double result = Math.pow(a, b);
-        System.out.print(a + " to the power of "+b+ " is " + result);
+        double a, b, result;
+        while (true) {
+            try {
+                System.out.print("Enter base number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
+        while (true){
+            try {
+                System.out.print("Enter exponent: ");
+                b = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
+        result = Math.pow(a, b);
+        System.out.print(a + " to the power of " + b + " is " + result);
     }
 
+
     public static void squareRoot() {
+        double a;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your number: ");
-        double a = scanner.nextDouble();
+        while (true) {
+            try{
+            System.out.print("Enter your number: ");
+            a = scanner.nextDouble();
+            scanner.nextLine();
+            break;
+        } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
         System.out.print("The Square Root of " + a + " is " + Math.sqrt(a));
     }
 
     public static void sine() {
+        double a;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your number: ");
-        double a = scanner.nextDouble();
+        while (true) {
+            try{
+                System.out.print("Enter your number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
         System.out.print("The Sine of " + a + " is " + Math.sin(a));
     }
 
     public static void cosine() {
+        double a;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your number: ");
-        double a = scanner.nextDouble();
+        while (true) {
+            try{
+                System.out.print("Enter your number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
         System.out.print("The Cosine of " + a + " is " + Math.cos(a));
     }
 
     public static void tangent() {
+        double a;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your number: ");
-        double a = scanner.nextDouble();
-        System.out.print("The Tangent of " + a + " is " + Math.tan(a));
+        while (true) {
+            try{
+                System.out.print("Enter your number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
+        System.out.print("The tangent of " + a + " is " + Math.tan(a));
     }
 
     public static void naturalLogarithm() {
+        double a;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your number: ");
-        double a = scanner.nextDouble();
+        while (true) {
+            try{
+                System.out.print("Enter your number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
         System.out.print("The natural logarithm of " + a + " is " + Math.log(a));
     }
 
     public static void logarithm() {
+        double a;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your number: ");
-        double a = scanner.nextDouble();
-        System.out.print("The logarithm of " + a + " is " + Math.log10(a));
+        while (true) {
+            try{
+                System.out.print("Enter your number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
+        System.out.print("The logarithm of " + a + " to the base 10 is " + Math.log10(a));
     }
 
     public static void absoluteValue() {
+        double a;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your number: ");
-        double a = scanner.nextDouble();
+        while (true) {
+            try{
+                System.out.print("Enter your number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
         System.out.print("The absolute value of " + a + " is " + Math.abs(a));
     }
 
     public static void round() {
+        double a;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your number: ");
-        double a = scanner.nextDouble();
-        System.out.print("The rounded value of " + a + " is " + Math.round(a));
+        while (true) {
+            try{
+                System.out.print("Enter your number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
+        System.out.print("The rounding of " + a + " to nearest long is " + Math.round(a));
     }
 
     public static void ceiling() {
+        double a;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your number: ");
-        double a = scanner.nextDouble();
+        while (true) {
+            try{
+                System.out.print("Enter your number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
         System.out.print("The ceiling of " + a + " is " + Math.ceil(a));
     }
 
     public static void floor() {
+        double a;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your number: ");
-        double a = scanner.nextDouble();
+        while (true) {
+            try{
+                System.out.print("Enter your number: ");
+                a = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, please try again");
+                scanner.next();
+            }
+        }
         System.out.print("The floor of " + a + " is " + Math.floor(a));
     }
 
